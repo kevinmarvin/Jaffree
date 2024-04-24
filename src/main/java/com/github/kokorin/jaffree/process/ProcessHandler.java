@@ -214,7 +214,7 @@ public class ProcessHandler<T> {
                     "Failed to execute, exception appeared in one of helper threads", exceptions);
         }
 
-        if (status == false) {
+        if (!status) {
             throw new JaffreeAbnormalExitException(
                 "Process execution has ended with non-zero status: " + status
                     + ". Check logs for detailed error message.",
